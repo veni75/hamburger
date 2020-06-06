@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Hamburger</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Főoldal</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="rendel.html">Rendelés <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kapcsolat.html">Elérhetőség</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            <h2>Rendelés</h2>
+            <h3>Cégünk ajándéka</h3>
+            <p>Időjárástól függően kedveskedünk minden kedves vásárlónknak ajándékkal. Hogy mi ez az ajándék, azt megnézheted, ha kiválasztod azt a napot, amelyiken rendelni szeretnél.</p>
+            <form class="form-inline">
+                <label class="my-1 mr-2" for="napok"></label>
+                <select class="custom-select my-1 mr-sm-2" id="napok" oninput="ajandek();atlagHomerseklet();minHomerseklet();maxHomerseklet()">
+                    <option selected>Válassz</option>
+                    <option value="1">Hétfő</option>
+                    <option value="2">Kedd</option>
+                    <option value="3">Szerda</option>
+                    <option value="4">Csütörtök</option>
+                    <option value="5">Péntek</option>
+                    <option value="6">Szombat</option>
+                    <option value="7">Vasárnap</option>
+                </select>
+                <div class="col-4">
+                    <p>Ajándék: <span id="ajandekok"></span></p>
+                    
+                </div>
+                
+            </form>
+                        
+            <div class="row">
+                <div class="col-4">
+                    <p>Heti átlaghőmérséklet: <span id="atlag"></span> C</p>
+                    <p>Heti átlaghőmérséklet: <span id="atlagfahren"></span> F</p>
+                </div>
+                <div class="col-4">
+                    <p>Heti minimum: <span id="min"></span> C</p>
+                    <p>Heti minimum: <span id="minfahren"></span> F</p>
+                </div>
+                <div class="col-4">
+                    <p>Heti maximum: <span id="max"></span> C</p>
+                    <p>Heti maximum: <span id="maxfahren"></span> F</p>
+                </div>
+            </div>
+        </div>
+        <form>
+            <fieldset>
+
+                <legend>Személyes adatok</legend>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        required>
+                    <small id="emailHelp" class="form-text text-muted">Soha nem adjuk meg másnak az e-mail címed</small>
+                </div>
+                <div class="form-group">
+                    <label for="name">Név:</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="cim">Cím:</label>
+                    <input type="text" class="form-control" id="cim" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Feltét</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="feltet" id="feltet1" value="0" checked>
+                            <label class="form-check-label" for="feltet1">
+                                Nem kérek feltétet
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="feltet" id="feltet2" value="100">
+                            <label class="form-check-label" for="feltet2">
+                                Sajtos feltét (100Ft)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="feltet" id="feltet3" value="200">
+                            <label class="form-check-label" for="feltet3">
+                                Húsos feltét (200Ft)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="feltet" id="feltet4" value="300">
+                            <label class="form-check-label" for="feltet4">
+                                Sajtos-húsos feltét (300Ft)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="feltet" id="feltet5" value="400">
+                            <label class="form-check-label" for="feltet5">
+                                Extra feltét (400Ft)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group row">
+                <div class="col-sm-2">Szósz</div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="szosz" value="100">
+                        <label class="form-check-label" for="szosz">
+                            Kérek szószt (100Ft)
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cim">Hány hamburgert kérsz? </label>
+                <input type="number" class="form-control" id="darab" min=1 max=10 value=1 required oninput="osszeg()">
+            </div>
+            <p>Rendelés ára: <span id="osszeg">0</span> Ft</p>
+            <p id="hazhoz"></p>
+            <button type="button" class="btn btn-primary" onclick="osszeg()">Megrendelem</button>
+        </form>
+    </div>
+    <script src="osszeg.js"></script>
+    <script src="idojaras.js"></script>
+</body>
+
+</html>

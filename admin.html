@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Hamburger</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Főoldal</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="rendel.html">Rendelés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kapcsolat.html">Elérhetőség</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html">Admin<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <form>
+            <fieldset>
+
+                <legend>Személyes adatok</legend>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="adminemail" aria-describedby="emailHelp" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="name">Név:</label>
+                    <input type="text" class="form-control" id="adminname" required>
+                </div>
+                <div class="form-group">
+                    <label for="cim">Cím:</label>
+                    <input type="text" class="form-control" id="admincim" required>
+                </div>
+            </fieldset>
+            <button type="button" class="btn btn-primary" id="felvesz">Felvesz</button>
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Név</th>
+                    <th>Cím</th>
+                    <th>Email</th>
+                    <th>Módosítás/törlés</th>
+                </tr>
+            </thead>
+            <tbody id="admintabla">
+                <tr>
+                    <td>1</td>
+                    <td>Kovács János</td>
+                    <td>8000 Székesfehérvár</td>
+                    <td>kovacs@gmail.com</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-warning">Módosít</button>
+                            <button type="button" class="btn btn-success">Ment</button>
+                            <button type="submit" class="btn btn-danger">Töröl</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Kiss János</td>
+                    <td>1025 Budapest</td>
+                    <td>kiss@gmail.com</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-warning">Módosít</button>
+                            <button type="button" class="btn btn-success">Ment</button>
+                            <button type="submit" class="btn btn-danger">Töröl</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Németh János</td>
+                    <td>1056 Budapest</td>
+                    <td>nemeth@gmail.com</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-warning">Módosít</button>
+                            <button type="button" class="btn btn-success">Ment</button>
+                            <button type="submit" class="btn btn-danger">Töröl</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Németh János</td>
+                    <td>1056 Budapest</td>
+                    <td>nemeth@gmail.com</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-warning">Módosít</button>
+                            <button type="button" class="btn btn-success">Ment</button>
+                            <button type="submit" class="btn btn-danger">Töröl</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="osszeg.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>
