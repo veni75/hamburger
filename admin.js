@@ -1,9 +1,3 @@
-let cella = document.querySelector('td');
-/*cella.addEventListener("click", function cellaModosit(){
-  cella.innerHTML = "valami";
-  let input = document.createElement('input');
-  cella.appendChild(input);
-});*/
 
 function modosit() {
     let buttonmod = document.querySelectorAll(".btn-warning");
@@ -47,60 +41,53 @@ function modosit() {
 }
 modosit();
 
-function ment(){
-let buttonment = document.querySelectorAll(".btn-success");
+function ment() {
+    let buttonment = document.querySelectorAll(".btn-success");
 
 
-for (let i = 0; i < buttonment.length; i++) {
-    buttonment[i].addEventListener('click', function () {
-        let inputmezo = buttonment[i].parentElement.parentElement.previousElementSibling.firstChild;
-        let ujszovegemail = inputmezo.value;
-        inputmezo.parentElement.innerHTML = ujszovegemail;
-        inputmezo.parentElement.removeChild(inputtartalom[i]);
-        inputmezo.parentElement.innerHTML = ujszovegemail;
-        inputmezo.hidden = true;
-    });
-}
+    for (let i = 0; i < buttonment.length; i++) {
+        buttonment[i].addEventListener('click', function () {
+            let inputmezo = buttonment[i].parentElement.parentElement.previousElementSibling.firstChild;
+            let ujszovegemail = inputmezo.value;
+            inputmezo.parentElement.innerHTML = ujszovegemail;
+            inputmezo.parentElement.removeChild(inputtartalom[i]);
+        });
+    }
 
 
 
-for (let i = 0; i < buttonment.length; i++) {
-
-    buttonment[i].addEventListener("click", function () {
-        let inputmezo = buttonment[i].parentElement.parentElement.previousElementSibling.previousElementSibling.firstChild;
-        let ujszovegcim = inputmezo.value;
-        inputmezo.parentElement.innerHTML = ujszovegcim;
-        inputmezo.parentElement.removeChild(inputtartalom[i]);
-        inputmezo.parentElement.innerHTML = ujszovegcim;
-        inputmezo.hidden = true;
-    });
-}
-for (let i = 0; i < buttonment.length; i++) {
-    buttonment[i].addEventListener("click", function () {
-        let inputmezo = buttonment[i].parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.firstChild;
-        let ujszovegnev = inputmezo.value;
-        inputmezo.parentElement.innerHTML = ujszovegnev;
-        inputmezo.parentElement.removeChild(inputtartalom[i]);
-        inputmezo.parentElement.innerHTML = ujszovegnev;
-        inputmezo.hidden = true;
-    });
-}
+    for (let i = 0; i < buttonment.length; i++) {
+        buttonment[i].addEventListener("click", function () {
+            let inputmezo = buttonment[i].parentElement.parentElement.previousElementSibling.previousElementSibling.firstChild;
+            let ujszovegcim = inputmezo.value;
+            inputmezo.parentElement.innerHTML = ujszovegcim;
+            inputmezo.parentElement.removeChild(inputtartalom[i]);
+        });
+    }
+    for (let i = 0; i < buttonment.length; i++) {
+        buttonment[i].addEventListener("click", function () {
+            let inputmezo = buttonment[i].parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.firstChild;
+            let ujszovegnev = inputmezo.value;
+            inputmezo.parentElement.innerHTML = ujszovegnev;
+            inputmezo.parentElement.removeChild(inputtartalom[i]);
+        });
+    }
 }
 ment();
 
-function torol(){
-let buttontorol = document.querySelectorAll(".btn-danger");
-for (let i = 0; i < buttontorol.length; i++) {
-    buttontorol[i].addEventListener("click", function () {
-        let ok = confirm("Biztos akarod törölni?");
-        if (ok) {
+function torol() {
+    let buttontorol = document.querySelectorAll(".btn-danger");
+    for (let i = 0; i < buttontorol.length; i++) {
+        buttontorol[i].addEventListener("click", function () {
+            let ok = confirm("Biztos akarod törölni?");
+            if (ok) {
 
-            //buttontorol[i].parentElement.parentElement.parentElement.className = "hidden";
-            buttontorol[i].parentElement.parentElement.parentElement.hidden = true;
-        }
+                //buttontorol[i].parentElement.parentElement.parentElement.className = "hidden";
+                buttontorol[i].parentElement.parentElement.parentElement.hidden = true;
+            }
 
-    });
-}
+        });
+    }
 }
 torol();
 
